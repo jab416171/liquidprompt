@@ -1065,7 +1065,7 @@ _lp_battery()
 # a  green ⏚ if the battery is charging    and above threshold
 # a yellow ⏚ if the battery is charging    and under threshold
 # a yellow ⌁ if the battery is discharging but above threshold
-# a    red ⌁ if the battery is discharging and above threshold
+# a    red ⌁ if the battery is discharging and below threshold
 _lp_battery_color()
 {
     [[ "$LP_ENABLE_BATT" != 1 ]] && return
@@ -1139,7 +1139,7 @@ _lp_battery_color()
 # System load #
 ###############
 
-# Compute a gradient of background/forground colors depending on the battery status
+# Compute a gradient of background/forground colors depending on the system load
 _lp_load_color()
 {
     # Colour progression is important ...
